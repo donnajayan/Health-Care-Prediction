@@ -1,0 +1,96 @@
+{%extends 'admin_index.html'%}
+{%block content%}
+    <div id="legend">
+      <center><legend class="" style="font-size: 50px;margin-top: 20px;">EDIT DOCTOR</legend></center>
+    </div>
+    <br>  <center>
+    <!-- <form class="form-horizontal" action="" method="POST" >  
+      <fieldset>
+    
+    <div class="form-group">
+    
+      <div class="controls">
+          <input type="text" name="name" value="{{obj.name}}"><br>
+          <input type="text" name="email" value="{{obj.email}}"><br>
+          <input type="text" name="specialisation" value="{{obj.specialisation}}"><br>
+          <input type="text" name="department" value="{{obj.department}}"><br>
+          <input type="text" name="contact" value="{{obj.contact}}"><br>
+          <input type="submit" value="submit">
+          </div>
+ 
+      </div>
+      <br>
+    </fieldset>
+    </form> -->
+    <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+    <!------ Include the above in your HEAD tag ---------->
+ 
+    <div class="container">
+        <div class="row">
+        <div class="span12" style="
+        margin-left: 500px;
+    ">
+          <form class="form-horizontal" action='' method="POST">
+            <fieldset>
+              <!-- <center>
+              <div id="legend">
+                <legend class="">Edit Doctor</legend>
+              </div>
+            </center> -->
+          
+              <div class="control-group">
+                <!-- Username -->
+                <label class="control-label"  for="username">Name</label>
+                <div class="controls">
+                  <input type="text" id="username" name="name" value="{{obj.name}}" placeholder="" class="input-xlarge">
+                </div>
+              </div>
+              <div class="control-group">
+                <!-- Password-->
+                <label class="control-label" for="password">Email</label>
+                <div class="controls">
+                  <input type="text" id="password" name="email" value="{{obj.email}}" placeholder="" class="input-xlarge">
+                </div>
+              </div>
+              <div class="control-group">
+                <!-- Password-->
+                <label class="control-label" for="password">Specialisation</label>
+                <div class="controls">
+                  <input type="text" id="password" name="specialisation" value="{{obj.specialisation}}" placeholder="" class="input-xlarge">
+                </div>
+              </div>
+              <div class="control-group">
+                <!-- Password-->
+                <label class="control-label" for="password">Department</label>
+                <div class="controls">
+                  <input type="text" id="password" name="department" value="{{obj.department}}" placeholder="" class="input-xlarge">
+                </div>
+              </div>
+              <div class="control-group">
+                <!-- Password-->
+                <label class="control-label" for="password">Contact</label>
+                <div class="controls">
+                  <input type="text" id="password" name="contact" maxlength="10" value="{{obj.contact}}" placeholder="" class="input-xlarge">
+                </div>
+              </div>
+              <div class="control-group">
+                <!-- Button -->
+                <div class="controls">
+                  <button type="submit" class="btn btn-success">Update</button>
+                </div>
+              </div>
+          
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </center>
+<style>
+.form-control-lg{width: 400px;
+
+}
+</style>
+{%endblock%}

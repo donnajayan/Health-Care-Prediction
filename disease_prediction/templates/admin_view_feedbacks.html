@@ -1,0 +1,93 @@
+{%extends 'admin_layout.html'%}
+{%block content%}
+<br><br><br><br><br><br><br>
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+<!------ Include the above in your HEAD tag ---------->
+
+<center><h1>Feedbacks</h1></center>
+{%for i in obj%}
+<div class="container" style="width:1010px;">
+	<div class="row" style="width:1010px;">
+		 <div class="media comment-box" style="width:1010px;">
+            <div class="media-left">
+                <a href="#">
+                    <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                </a>
+            </div>
+            <div class="media-body">
+                <h6 class="media-heading">{{i.name}}<br>{{i.email}}<br>{{i.phone}}</h4>
+                <p>Subject : {{i.subject}}<br>{{i.message}}</p>
+                <div class="media">
+                    <!-- <div class="media-left">
+                        <a href="#">
+                            <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                        </a>
+                    </div> -->
+                    <!-- <div class="media-body">
+                        <h4 class="media-heading">Jane Doe</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div> -->
+                <!-- </div> -->
+                <!-- <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                        </a>
+                    </div> -->
+                    <!-- <div class="media-body">
+                        <h4 class="media-heading">John Doe</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+{%endfor%}
+<style>
+    /* CSS Test begin */
+.comment-box {
+    margin-top: 30px !important;
+}
+/* CSS Test end */
+
+.comment-box img {
+    width: 50px;
+    height: 50px;
+}
+.comment-box .media-left {
+    padding-right: 10px;
+    width: 65px;
+}
+.comment-box .media-body p {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+.comment-box .media-body .media p {
+    margin-bottom: 0;
+}
+.comment-box .media-heading {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 7px 10px;
+    position: relative;
+    margin-bottom: -1px;
+}
+.comment-box .media-heading:before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-width: 1px 0 0 1px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 10px;
+    left: -6px;
+}
+</style>
+<br><br><br><br><br><br><br>
+{%endblock%}

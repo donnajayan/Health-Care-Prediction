@@ -1,0 +1,171 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<br><br><br><br><br><br><br><br><br>
+<div id="legend">
+    <center><legend class="" style="font-size: 50px;margin-top: 20px;">Registeration Form</legend></center>
+  </div>
+  <form class="form-horizontal" action="" method="POST" enctype="multipart/form-data" style="margin-left: 480px;">
+      {{form.hidden_tag()}}
+  
+    <fieldset>
+  
+  <div class="form-group">
+  
+    <div class="controls">
+      {{ form.name.label(class="form-control-label") }}
+                                  {% if form.name.errors %}
+                                      {{ form.name(class="form-control form-control-lg is-invalid") }}
+                                      <div class="invalid-feedback">
+                                          {% for error in form.name.errors %}
+                                              <span>{{ error }}</span>
+                                          {% endfor %}
+                                      </div>
+                                  {% else %}
+                                      {{ form.name(class="form-control form-control-lg") }}
+                                  {% endif %}
+    </div>
+  </div>
+  <br>
+  <div class="form-group">
+  
+    <div class="controls">
+      {{ form.age.label(class="form-control-label") }}
+                                  {% if form.age.errors %}
+                                      {{ form.age(class="form-control form-control-lg is-invalid") }}
+                                      <div class="invalid-feedback">
+                                          {% for error in form.age.errors %}
+                                              <span>{{ error }}</span>
+                                          {% endfor %}
+                                      </div>
+                                  {% else %}
+                                      {{ form.age(class="form-control form-control-lg") }}
+                                  {% endif %}
+    </div>
+  </div>
+    <br>
+  <div class="form-group">
+      
+      <div class="controls">
+      {{ form.gender.label(class="form-control-label") }}
+                                    {% if form.gender.errors %}
+                                        {{ form.gender(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.gender.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.gender(class="form-control form-control-lg") }}
+                                    {% endif %}
+       </div>
+    </div>
+    <br>
+    <div class="form-group">
+      
+      <div class="controls">
+      {{ form.address.label(class="form-control-label") }}
+                                    {% if form.address.errors %}
+                                        {{ form.address(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.address.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.address(class="form-control form-control-lg") }}
+                                    {% endif %}
+       </div>
+    </div>
+    <br>
+    <div class="form-group">
+     
+      <div class="controls">
+      {{ form.place.label(class="form-control-label") }}
+                                    {% if form.place.errors %}
+                                        {{ form.place(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.place.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.place(class="form-control form-control-lg") }}
+                                    {% endif %}
+       </div>
+    </div>
+    <br>
+    <div class="form-group">
+     
+        <div class="controls">
+        {{ form.email.label(class="form-control-label") }}
+                                      {% if form.email.errors %}
+                                          {{ form.email(class="form-control form-control-lg is-invalid") }}
+                                          <div class="invalid-feedback">
+                                              {% for error in form.email.errors %}
+                                                  <span>{{ error }}</span>
+                                              {% endfor %}
+                                          </div>
+                                      {% else %}
+                                          <br>
+                                          <input type="email" id="phone" name="email" class="form-control" style="width: 397px;">
+                                      {% endif %}
+         </div>
+      </div>
+
+    <div class="form-group">
+     
+      <div class="controls">
+      {{ form.contact.label(class="form-control-label") }}
+                                    {% if form.contact.errors %}
+                                        {{ form.contact(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.contact.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                    <br>
+                                    <input type="text" id="phone" name="contact" maxlength="10"  pattern="[0-9]{10}" class="form-control" style="width: 397px;">
+                                    {% endif %}
+       </div>
+    </div>
+    <br>
+    <div class="form-group">
+     
+      <div class="controls">
+      {{ form.password.label(class="form-control-label") }}
+                                    {% if form.password.errors %}
+                                        {{ form.password(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.password.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.password(class="form-control form-control-lg") }}
+                                    {% endif %}
+       </div>
+    </div>
+    <br>
+    
+   
+    
+  
+    <div class="form-group">
+    
+      <div class="controls">
+          {{ form.submit(class="btn btn-outline-info") }}
+    </div>
+  
+    </div>
+    <br>
+  </fieldset>
+  </form>
+
+<style>
+.form-control-lg{width: 400px;
+
+}
+</style>
+{% endblock %}
